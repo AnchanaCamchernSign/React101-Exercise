@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 type="text" name="todo" id="todoTitle" >Todo List</h1>
+        <input type="text" name="title" id="title" >
+        <button type="button" id="submit">submit</button>
+
+        <script>
+           // console.log('Hello Gracie ')
+            var app = document.getElementById('app')
+            var titleInput = document.getElementById("title")
+            var submitButton = document.getElementById("submit")
+            var ul = document.createElement('ul')
+            var liHome = document.createElement('li')
+            liHome.innerHTML = 'Home'
+            ul.appendChild(liHome)
+
+            submitButton.addEventListener('click', function () {
+                var li = document.createElement('li')
+                li.innerHTML = titleInput.value
+                titleInput.value = ''
+                li.addEventListener('click', function () {
+                    if (li.style.textDecoration === 'line-through') {
+                        li.style.textDecoration = 'none'
+                    } else {
+                        li.style.textDecoration = 'line-through'
+                    }
+                })
+                ul.appendChild(li)
+            })
+
+            liHome.addEventListener('click', function () {
+                if (liHome.style.textDecoration === 'line-through') {
+                    liHome.style.textDecoration = 'none'
+                } else {
+                    liHome.style.textDecoration = 'line-through'
+                }
+            })
+            app.appendChild(ul)
+        </script>
+        <noscript>
+            Your browser no javascript
+        </noscript>
+    </div>
+</body>
+
+</html>
