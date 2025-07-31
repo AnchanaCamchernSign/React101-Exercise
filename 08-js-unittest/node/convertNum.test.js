@@ -67,7 +67,7 @@ describe("numberToThaiText", function () {
   });
 
    test("1000001 should be หนึ่งล้านหนึ่ง", function () {
-    const inputNumber = 1000001
+    const inputNumber = 1000001 
     const expected = "หนึ่งล้านหนึ่ง" 
 
     const result = numberToThaiText(inputNumber)
