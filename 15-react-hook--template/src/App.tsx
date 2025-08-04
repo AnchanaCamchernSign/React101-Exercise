@@ -99,7 +99,7 @@ function App() {
   const handleUpdateClick = useCallback((todo: Todo) => {
     todo.isComplete = !todo.isComplete;
     dispatch({ type: "UPDATE", payload: todo });
-  }, [])
+  }, []);
 
   const handleRemoveClick = (todo: Todo) => {
     dispatch({ type: "REMOVE", payload: todo });
@@ -117,7 +117,7 @@ function App() {
         return state.todos;
         break;
     }
-  }, [filter, state.todos])
+  }, [filter, state.todos]);
 
   return (
     <div>
