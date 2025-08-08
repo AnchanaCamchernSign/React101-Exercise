@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const foo = () => {
+            console.log('First');
+        }
+
+        const bar = () => {
+            setTimeout(() => {
+                console.log('Second');
+            }, 0);
+        }
+
+        const baz = () => {
+            console.log('Third');
+        }
+
+        foo()
+        bar()
+        baz()
+
+        // Promise --> use for handle asynchrony
+        const resolvePromise = Promise.resolve('Hello')
+        resolvePromise.then((value) => {
+            console.log('Success: ', value)
+        })
+
+        const rejectPromise = Promise.reject('Error')
+        rejectPromise.then((value) => {
+            console.log('Success: ', value);
+        }).catch((error) => {
+            console.log('Error: ', error);
+        })
+
+        const promiseA = new Promise((resolve, reject) => {
+            resolve('World')
+        })
+        promiseA.then((v) => {
+            console.log(v);
+        }).catch((error) => {
+            console.log('Error', error);
+        })
+
+        Promise.resolve(43)
+            .then(v => v * 2)
+            .then(v => Promise.resolve(v * 1000))
+            .then((v) => {
+                console.log(v);
+
+            })
+
+        // async/await
+
+        const promiseB = new Promise((resolve, reject) => {
+            resolve('111')
+        })
+
+
+        async function run() {
+            const v = await promiseB
+            console.log('async / await is B : ', v);
+        }
+
+        run()
+    </script>
+</body>
+
+</html>

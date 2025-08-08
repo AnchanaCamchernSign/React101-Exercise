@@ -1,0 +1,12 @@
+{
+  "name": "11-ts",
+  "version": "1.0.0",
+  "description": "``` npm install -g typescript ```",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

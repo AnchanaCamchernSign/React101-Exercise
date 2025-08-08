@@ -149,7 +149,7 @@ function App() {
                 ❤️{" "}
               </button>
               <button
-                style={{
+                style={{ 
                   border: "1px solid #eee",
                   margin: 5,
                   borderRadius: 5,
@@ -168,3 +168,5 @@ function App() {
 }
 
 export default App;
+
+

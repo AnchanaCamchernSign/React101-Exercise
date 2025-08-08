@@ -18,7 +18,6 @@ function convertRomandNumber(number) {
   if (isNaN(number)) return "";
 
   let result = "";
-
   for (let key in numberRomand) {
     while (number >= numberRomand[key]) {
       result += key;
